@@ -43,7 +43,7 @@ WIDTH            = const(0x54) # 84
 HEIGHT           = const(0x30) # 48
 
 class PCD8544(framebuf.FrameBuffer):
-	def __init__(self, spi, cs, dc, rst=None):
+	def __init__(self, spi, cs, dc, rst):
 		self.spi    = spi
 		self.cs     = cs   # chip enable, active LOW
 		self.dc     = dc   # data HIGH, command LOW
@@ -79,8 +79,7 @@ class PCD8544(framebuf.FrameBuffer):
 		sleep_us(100)
 		self.rst(0)
 		sleep_us(100) # reset impulse has to be >100 ns and <100 ms
-		self.rst(1)
-		sleep_us(100)
+
 
 	def power_on(self):
 		self.cs(1)
