@@ -1,1 +1,1 @@
-
+Se mostrará el proceso de trabajo con cada periférico mencionado en el inicio del proyecto. El software utilizado para el trabajo en Micropython desde Windows es Thonny 3.3.13 (https://thonny.org), donde se programa la tarjeta de desarrollo con micropython con la versión 1.14 de 2021-02-02 (https://micropython.org/download/esp32/)
